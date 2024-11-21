@@ -1,0 +1,10 @@
+gnuplot << EOF
+set terminal png size 1600,900
+set output 'courbe.png'
+set title 'Courbe'
+set xlabel 'X'
+set ylabel 'Y'
+plot 'thread.data' using 1:2 with lines
+EOF
+
+./devoir 15 | head -n 500 > thread.data
